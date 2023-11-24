@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="h1 text-center">Editar Cargo</div>
+            <div class="col-12 w-25">
+                <form th:object="${upProveedor}" th:action="@{/proveedores/update}" th:method ="post"   class="form-control p-2 ">
+                    <input th:field="*{id}" class="form-control" type="hidden" >
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input th:field="*{nombre}" class="form-control" type="text" id="nombre" >
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Telefono:</label>
+                        <input th:field="*{telefono}" class="form-control" type="text" id="telefono" >
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Direccion:</label>
+                        <input th:field="*{direccion}" class="form-control" type="text" id="direccion" >
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo:</label>
+                        <input th:field="*{correo}" class="form-control" type="text" id="correo" >
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado:</label>
+                        <input th:field="*{estado}" class="form-control" type="text" id="estado" >
+                    </div>
+                    
+                    
+                    <button class="btn btn-outline-secondary mt-1" type="submit">Guardar</button>
+                    <a href="/proveedores" class="btn btn-secondary" >Atras</a>
+                </form>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
